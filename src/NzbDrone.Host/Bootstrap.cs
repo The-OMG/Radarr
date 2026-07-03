@@ -161,7 +161,8 @@ namespace NzbDrone.Host
                     c.AutoAddServices(Bootstrap.ASSEMBLIES)
                         .AddNzbDroneLogger()
                         .AddDatabase()
-                        .AddStartupContext(context);
+                        .AddStartupContext(context)
+                        .AddDriveDispatch();
 
                     if (logDbEnabled)
                     {
